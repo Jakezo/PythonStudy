@@ -21,10 +21,10 @@ for i in range(5):
     print("{0}학생의 점수는 {1} 점이고, 등급은 {2} 입니다.".format(name[i],score[i],grade))
 
 
-a = 2
-b = 3
-s = '구구단 {0} x {1} = {2}'.format(a, b, a * b)   # 포멧함수 순서대로 넣는 방식이다.
-print(s)
+a = int(input("단 수 입력:"))
+for b in range(1, 10):
+    s = '구구단 {0} x {1} = {2}'.format(a, b, a * b)   # 포멧함수 순서대로 넣는 방식이다.
+    print(s)  # 파이썬은 들여쓰기가 제일 중요하다 !! 이렇게 들여쓰기 안하면 단수에 9 곱한거만 나옴.
 
 # 파이썬 한줄 삭제 Ctrl + Y 라인복사 Ctrl + D
 
@@ -32,3 +32,16 @@ print(s)
 num = int(input("정수입력:"))
 for i in  range(1, num+1):     # range(1,10)  1부터 9까지의 숫자 범위를 나타낸다.
     print(i)
+
+# 홀수의 개수와 짝수의 개수  판단 프로그래밍
+
+nums =[6,3,5, 33,12,99]
+odd = 0
+even = 0
+for i in nums:
+    if i %2 ==1:
+        odd += 1
+    else:
+        even += 1
+print("홀수:", odd)
+print("짝수:", even)
